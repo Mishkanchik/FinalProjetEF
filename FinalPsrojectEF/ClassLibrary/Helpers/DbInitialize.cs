@@ -15,7 +15,7 @@ namespace ClassLibrary.Helpers
 
 
            
-            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjectEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\AuthorInitializeFile.json");
+            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjetEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\AuthorInitializeFile.json");
             var authors = JsonConvert.DeserializeObject<Author[]>(jsonData);
             modelBuilder.Entity<Author>().HasData(authors);
 
@@ -25,14 +25,14 @@ namespace ClassLibrary.Helpers
 
 
 
-            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjectEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\BookInitializeFile.json");
+            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjetEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\BookInitializeFile.json");
             var book = JsonConvert.DeserializeObject<Book[]>(jsonData);
             modelBuilder.Entity<Book>().HasData(book);
 
         }
         public static void SeedCostBook(this ModelBuilder modelBuilder)
         {
-            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjectEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\CostBookInitializeFile.json");
+            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjetEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\CostBookInitializeFile.json");
             var costBook = JsonConvert.DeserializeObject<CostBook[]>(jsonData);
             modelBuilder.Entity<CostBook>().HasData(costBook);
 
@@ -42,7 +42,7 @@ namespace ClassLibrary.Helpers
 
 
 
-            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjectEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\GenreInitializeFile.json");
+            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjetEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\GenreInitializeFile.json");
             var genre = JsonConvert.DeserializeObject<Genre[]>(jsonData);
             modelBuilder.Entity<Genre>().HasData(genre);
 
@@ -52,7 +52,7 @@ namespace ClassLibrary.Helpers
 
 
 
-            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjectEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\PublishingInitializeFile.json");
+            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjetEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\PublishingInitializeFile.json");
             var publishing = JsonConvert.DeserializeObject<Publishing[]>(jsonData);
             modelBuilder.Entity<Publishing>().HasData(publishing);
 
@@ -62,7 +62,7 @@ namespace ClassLibrary.Helpers
 
 
 
-            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjectEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\SellingBookInitializeFile.json");
+            var jsonData = File.ReadAllText(@"C:\Users\Ron\FinalProjetEFLibrary\FinalPsrojectEF\ClassLibrary\JsonInitializerFiles\SellingBookInitializeFile.json");
             var sellingBook = JsonConvert.DeserializeObject<SellingBook[]>(jsonData);
             modelBuilder.Entity<SellingBook>().HasData(sellingBook);
 
