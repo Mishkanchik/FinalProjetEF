@@ -10,7 +10,7 @@ namespace ClassLibrary.CRUDMethods
 {
     public class Create
     {
-        // Create
+
         public void CreateAuthor(string fullName, int howManyBooks)
         {
             using (var context = new LibraryDbContext())
@@ -21,8 +21,8 @@ namespace ClassLibrary.CRUDMethods
                     HowManyBooks = howManyBooks
                 };
 
-                context.Author.Add(author); // Додаємо автора до контексту
-                context.SaveChanges();        // Зберігаємо зміни в базі даних
+                context.Author.Add(author); 
+                context.SaveChanges();   
             }
         }
 
@@ -43,8 +43,8 @@ namespace ClassLibrary.CRUDMethods
                     PublishingsId = PublishingsId
                 };
 
-                context.Book.Add(book); // Додаємо автора до контексту
-                context.SaveChanges();        // Зберігаємо зміни в базі даних
+                context.Book.Add(book);
+                context.SaveChanges();    
             }
         }
 
@@ -60,8 +60,8 @@ namespace ClassLibrary.CRUDMethods
                     BookId = BookId
                 };
 
-                context.CostBook.Add(costBook); // Додаємо автора до контексту
-                context.SaveChanges();        // Зберігаємо зміни в базі даних
+                context.CostBook.Add(costBook); 
+                context.SaveChanges();      
             }
         }
 
@@ -76,8 +76,8 @@ namespace ClassLibrary.CRUDMethods
                    
                 };
 
-                context.Genre.Add(genre); // Додаємо автора до контексту
-                context.SaveChanges();        // Зберігаємо зміни в базі даних
+                context.Genre.Add(genre); 
+                context.SaveChanges();      
             }
         }
 
@@ -92,8 +92,8 @@ namespace ClassLibrary.CRUDMethods
                     
                 };
 
-                context.Publishing.Add(publishing); // Додаємо автора до контексту
-                context.SaveChanges();        // Зберігаємо зміни в базі даних
+                context.Publishing.Add(publishing); 
+                context.SaveChanges();      
             }
         }
 
@@ -107,8 +107,8 @@ namespace ClassLibrary.CRUDMethods
                    
                 };
 
-                context.SellingBook.Add(sellingBook); // Додаємо автора до контексту
-                context.SaveChanges();        // Зберігаємо зміни в базі даних
+                context.SellingBook.Add(sellingBook); 
+                context.SaveChanges();     
             }
         }
 
