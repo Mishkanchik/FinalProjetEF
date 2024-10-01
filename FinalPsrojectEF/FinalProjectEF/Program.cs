@@ -3,24 +3,27 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using ClassLibrary;
 using ClassLibrary.CRUDMethods;
 using ClassLibrary.Menu;
+using ClassLibrary.CRUDMethods.Factory;
 
 
 namespace FinalProjectEF
 {
     internal class Program
     {
-        static void Main()
+        public static void Main(string[] args)
         {
-           LibraryDbContext  LibraryDbContext = new LibraryDbContext();
-            Create create = new Create();
-            Reed reed = new Reed();
-            Update update = new Update();
-            Delete delete = new Delete();
+            var factories = new Dictionary<string, ICrudFactory>
+        {
+            { "Author", new AuthorCrudFactory() },
+            { "Book", new BookCrudFactory() },
+            { "CostBook", new CostBookCrudFactory() },
+            { "Genre", new GenreCrudFactory() },
+            { "Publishing", new PublishingCrudFactory() },
+            { "SellingBook", new SellingBookCrudFactory() },
+        };
 
-            MenuCRUD menu = new MenuCRUD(LibraryDbContext, create, reed,update,delete);
+            var menu = new MenuCRUD(factories);
             menu.DisplayMenu();
-           
-
         }
     }
 }
